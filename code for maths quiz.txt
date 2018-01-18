@@ -1,0 +1,91 @@
+<script>
+function start() {
+ 
+ var n3 = 0;
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q1 = prompt("Q1. What is " + n1 + " times " + n2 + " ?");
+ if (q1 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q2 = prompt("Q2. What is " + n1 + " times " + n2 + " ?");
+ if (q2 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q3 = prompt("Q3. What is " + n1 + " times " + n2 + " ?");
+ if (q3 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q4 = prompt("Q4. What is " + n1 + " times " + n2 + " ?");
+ if (q4 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q5 = prompt("Q5. What is " + n1 + " times " + n2 + " ?");
+ if (q5 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q6 = prompt("Q6. What is " + n1 + " times " + n2 + " ?");
+ if (q6 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q7 = prompt("Q7. What is " + n1 + " times " + n2 + " ?");
+ if (q7 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q8 = prompt("Q8. What is " + n1 + " times " + n2 + " ?");
+ if (q8 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q9 = prompt("Q9. What is " + n1 + " times " + n2 + " ?");
+ if (q9 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ var n1 = Math.floor((Math.random() * 10) + 0);
+ var n2 = Math.floor((Math.random() * 10) + 0);
+ var n4 = n2 * n1
+ var q10 = prompt("Q10. What is " + n1 + " times " + n2 + " ?");
+ if (q10 == n4.toString()) {
+  n3 = n3 + 1;
+ }
+ if (n3 == 0) {
+  alert("Oh no! You haven't got any questions right! Better luck next time!")
+ } 
+ else if (n3<=5 && n3>0) {
+  alert("You have got " + n3.toString() + " questions right. Maybe you should revise your times tables a bit better?")
+ }
+ else if (n3>5 && n3<=7) {
+  alert("You've done alright. You got " + n3.toString() + " questions correct.")
+ }
+ else if (n3>7 && n3<10) {
+  alert("Great! You got " + n3.toString() + " questions right!")
+ }
+ else {
+  alert("Wow! You got all the questions right! Keep it up and you'll be on your way to becoming a millionaire!")
+ }
+}
+</script>
