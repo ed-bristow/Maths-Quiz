@@ -9,6 +9,22 @@
 	</head>
 	<body>
 		<h1>Maths Quiz</h1>
-		<p id="question"><span id="q">Q</span><span id="space">    </span>Question</p>
+		<div id="row">
+			<div id="left_column">
+				<p id="question"><span id="q">Q</span><span id="space">    </span>Question</p>
+			</div>
+			<div id="right_column">
+				<p id="score"><span id="s">Score:</span><span id="space">    </span>####</p>
+			</div>
+		</div>
+		<br>
+		<div id="form">
+			<br>
+			<input type ="text" name="answer" placeholder="Your answer...">
+			<br> <br>
+			<input type="submit" value="Submit">
+		</div>
+		<br>
+		<button id="btn" onclick="start()" style="font-size:125%">Start a new game.</button>
 	</body>
 </html>
