@@ -4,25 +4,54 @@
 	<head>
 		<link rel="stylesheet" href="maths_quiz.css">
 		<script>
-			
+			var started = false
+			var counter = 1
+			var ans = "0"
+			function new_question() {
+				var n1 = Math.floor((Math.random() * 10) + 1);
+				var n2 = Math.floor((Math.random() * 10) + 1);
+				ans = n2 * n1
+				document.getElementById("q_text").innerHTML="Q" + counter + ". What is " + n1 + " times " + n2 + " ?";
+				counter += 1;
+			}
+			function start() {
+				started = true
+				document.getElementById("score_num").innerHTML = "0";
+				counter = 1;
+				new_question()
+			}
+			function check_ans() {
+				if (started == true) {
+					if (document.getElementById("q_ans").value == ans.toString()) {
+						document.getElementById("score_num").innerHTML = parseInt(document.getElementById("score_num").innerHTML) + 1;
+					}
+					if (counter < 11) {
+						new_question()
+					} else {
+						document.getElementById("q_text").innerHTML = "Quiz finished.";
+						alert("Quiz finished. Your score was " + document.getElementById("score_num").innerHTML + "!");
+					}
+					document.getElementById("q_ans").value = "";
+				}
+			}
 		</script>
 	</head>
 	<body>
 		<h1>Maths Quiz</h1>
 		<div id="row">
 			<div id="left_column">
-				<p id="question"><span id="q">Q</span><span id="space">    </span>Question</p>
+				<p id="question"><span id="q">Q</span><span id="space">  </span><span id="q_text">Question</span></p>
 			</div>
 			<div id="right_column">
-				<p id="score"><span id="s">Score:</span><span id="space">    </span>####</p>
+				<p id="score"><span id="s">Score:</span><span id="space">  </span><span id="score_num">####</span></p>
 			</div>
 		</div>
 		<br>
 		<div id="form">
 			<br>
-			<input type ="text" name="answer" placeholder="Your answer...">
+			<input id ="q_ans" type ="text" name="answer" placeholder="Your answer...">
 			<br> <br>
-			<input type="submit" value="Submit">
+			<button id="submit" onclick="check_ans()">Submit</button>
 		</div>
 		<br>
 		<button id="btn" onclick="start()" style="font-size:125%">Start a new game.</button>
