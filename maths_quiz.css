@@ -66,12 +66,10 @@ input[type=submit] {
 #left_column {
     float: left;
     width: 50%;
-    padding: 10px;
 }
 #right_column {
     float: right;
     width: 50%;
-    padding: 10px;
 }
 #score {
 	font-size: 300%;
