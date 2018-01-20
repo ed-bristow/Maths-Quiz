@@ -4,17 +4,19 @@
 	<head>
 		<link rel="stylesheet" href="maths_quiz.css">
 		<script>
-			var started = false
-			var counter = 1
-			var ans = "0"
+			var finished = false;
+			var started = false;
+			var counter = 1;
+			var ans = "0";
 			function new_question() {
 				var n1 = Math.floor((Math.random() * 10) + 1);
 				var n2 = Math.floor((Math.random() * 10) + 1);
 				ans = n2 * n1
-				document.getElementById("q_text").innerHTML="Q" + counter + ". What is " + n1 + " times " + n2 + " ?";
+				document.getElementById("q_text").innerHTML="Q" + counter + ". What is " + n1 + " times " + n2 + "?";
 				counter += 1;
 			}
 			function start() {
+				finished = false
 				started = true
 				document.getElementById("score_num").innerHTML = "0";
 				counter = 1;
@@ -25,13 +27,14 @@
 					if (document.getElementById("q_ans").value == ans.toString()) {
 						document.getElementById("score_num").innerHTML = parseInt(document.getElementById("score_num").innerHTML) + 1;
 					}
+					document.getElementById("q_ans").value = "";
 					if (counter < 11) {
 						new_question()
-					} else {
+					} else if (finished == false) {
 						document.getElementById("q_text").innerHTML = "Quiz finished.";
 						alert("Quiz finished. Your score was " + document.getElementById("score_num").innerHTML + "!");
+						finished = true
 					}
-					document.getElementById("q_ans").value = "";
 				}
 			}
 		</script>
